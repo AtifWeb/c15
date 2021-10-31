@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+      integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="body-area">
+      <div class="top-area">
+        <div class="left-area">
+          <h1>C15MRI TESTS</h1>
+          <p>
+            At C15MRI we are dedicate to keep a transparent and reliable
+            communication among our partners and customers.
+          </p>
+        </div>
+        <div class="right-area">
+          <p>
+            <span>100</span> tests <br />
+            reported today
+          </p>
+        </div>
+      </div>
+
+      <div class="content-area">
+        <div class="left-area">
+          <div class="box-grid-wrapper-2">
+            <div class="box fetch-box">
+              <h1>Fetch Report</h1>
+              <form action="">
+                <div class="select-wrapper">
+                  <label for="District"> District </label>
+                  <select name="" id="Choose">
+                    <option value="null">Choose</option>
+                  </select>
+                </div>
+                <div class="select-wrapper">
+                  <label for="Facility"> Facility Type </label>
+                  <select name="" id="Choose">
+                    <option value="null">Choose</option>
+                  </select>
+                </div>
+
+                <div class="select-wrapper">
+                  <label for="Name"> Name of Facility </label>
+                  <select name="" id="Choose">
+                    <option value="null">Choose</option>
+                  </select>
+                </div>
+              </form>
+
+              <div class="buttons-wrapper">
+                <button>Fetch Results</button>
+              </div>
+            </div>
+            <div class="box table-box">
+              <h1>Non-Performing Facilities</h1>
+
+              <table>
+                <thead>
+                  <th>HOSPITAL</th>
+                  <th>TODAY</th>
+                  <th>LAST 7 DAYS</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>District Hospitals</td>
+                    <td>5</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Sub-Divisional Hospitals</td>
+                    <td>20</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="box-grid-wrapper-4">
+            <div class="small-box">
+              <div class="top">
+                <p>X-RAY Done</p>
+                <p>
+                  <img src="./assets/img/greenUpArrow.png" alt="" />
+                  13.8%
+                </p>
+              </div>
+              <div class="content-box">
+                <p>25 <span>Today</span></p>
+                <p>250 <span>Cumulative</span></p>
+              </div>
+            </div>
+            <div class="small-box">
+              <div class="top">
+                <p>Reports Generated</p>
+                <p class="red">
+                  <img src="./assets/img/redDownArrow.png" alt="" />
+                  13.8%
+                </p>
+              </div>
+              <div class="content-box">
+                <p>25 <span>Today</span></p>
+                <p>103 <span>Cumulative</span></p>
+              </div>
+            </div>
+            <div class="small-box">
+              <div class="top">
+                <p>Delayed Reports</p>
+                <p class="red">
+                  <img src="./assets/img/redDownArrow.png" alt="" />
+                  13.8%
+                </p>
+              </div>
+              <div class="content-box">
+                <p>100 <span>X-RAY Technicians</span></p>
+                <p>214 <span>Radiologists</span></p>
+              </div>
+            </div>
+            <div class="small-box">
+              <div class="top">
+                <p class="first">On-board</p>
+              </div>
+              <div class="content-box">
+                <p>25 <span>Today</span></p>
+                <p>105 <span>Cumulative</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box line-box">
+            <div class="top-area">
+              <h1>Performance Monitor</h1>
+              <select name="" id="">
+                <option value="Monthly">Monthly</option>
+              </select>
+            </div>
+
+            <div
+              class="chart-wrapper"
+              style="width: 100%; height: 300px; margin-top: 2rem"
+            >
+              <canvas id="line-c15-bar"></canvas>
+            </div>
+          </div>
+
+          <div class="box barchart-box">
+            <div class="top-area">
+              <h1>X-RAY Done District Wise</h1>
+              <select name="" id="">
+                <option value="Monthly">Monthly</option>
+              </select>
+            </div>
+            <p>Total: 100</p>
+
+            <div
+              class="chart-wrapper"
+              style="width: 100%; height: 300px; margin-top: 2rem"
+            >
+              <canvas id="c15-bar"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="wrapper">
+            <h1>Performance Report</h1>
+            <div class="select-container">
+              <div class="select-wrapper">
+                <label for="Name">Start Date </label>
+                <select name="" id="Choose">
+                  <option value="null">DD/MM/YY</option>
+                </select>
+              </div>
+              <div class="select-wrapper">
+                <label for="Name">End Date </label>
+                <select name="" id="Choose">
+                  <option value="null">DD/MM/YY</option>
+                </select>
+              </div>
+            </div>
+            <div class="select-container">
+              <div class="select-wrapper">
+                <label for="District">District</label>
+                <select name="" id="Choose">
+                  <option value="null">Choose</option>
+                </select>
+              </div>
+              <div class="select-wrapper">
+                <label for="Facility ">Facility Type </label>
+                <select name="" id="Choose">
+                  <option value="null">Choose</option>
+                </select>
+              </div>
+              <div class="select-wrapper">
+                <label for="Facility ">Name of Facility </label>
+                <select name="" id="Choose">
+                  <option value="null">Choose</option>
+                </select>
+              </div>
+            </div>
+            <div class="select-container">
+              <div class="select-wrapper">
+                <label for="District">District</label>
+                <select name="" id="Choose">
+                  <option value="null">Choose</option>
+                </select>
+              </div>
+            </div>
+            <p>Output</p>
+
+            <div class="buttons-wrapper">
+              <button>Download Report</button>
+              <button>Access Teleradiology Database</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <h1>Report Delayed</h1>
+
+            <div class="buttons-wrapper">
+              <button class="active">Upto 2 hours</button>
+              <button>Upto 2 hours</button>
+            </div>
+
+            <div class="charts-area">
+              <p><span>Today</span> 25</p>
+              <div class="chart-wrapper">
+                <canvas id="patient-credit-bar"></canvas>
+              </div>
+              <p style="color: #e77817"><span>Cumulative</span> 250</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/linechart.js"></script>
+    <script src="./assets/js/barchart.js"></script>
+    <script src="./assets/js/DognutChart.js"></script>
+  </body>
+</html>
